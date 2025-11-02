@@ -1,6 +1,6 @@
 1. pull the repo
 2. download dependecies using - npm i
-3. add env :
+3. add env :[create dotenv file and paste below code]
 
  # OpenWeatherMap API
 REACT_APP_WEATHER_API_KEY=8ed7038a7a1fbc19a39b41877c6af2b0
