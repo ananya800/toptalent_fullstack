@@ -1,0 +1,225 @@
+.settings-page {
+  min-height: 80vh;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.settings-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.settings-header {
+  margin-bottom: 3rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #4287f5 0%, #3498db 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(66, 135, 245, 0.3);
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 4px 12px rgba(66, 135, 245, 0.4);
+}
+
+.settings-header h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.settings-subtitle {
+  color: #546e7a;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.settings-section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, transparent, #ffb6d9, transparent) 1;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.settings-section h3 {
+  color: #2c3e50;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(66, 135, 245, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.setting-item:hover {
+  background: rgba(66, 135, 245, 0.08);
+  border-color: rgba(66, 135, 245, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.setting-info label {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.setting-description {
+  color: #546e7a;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.toggle-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.unit-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4287f5;
+  background: white;
+  color: #4287f5;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(66, 135, 245, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.unit-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(66, 135, 245, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.unit-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.unit-button:hover {
+  background: rgba(66, 135, 245, 0.05);
+  border-color: #3498db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 135, 245, 0.2);
+}
+
+.unit-button.active {
+  background: linear-gradient(135deg, #4287f5 0%, #3498db 100%);
+  color: white;
+  border-color: #4287f5;
+  box-shadow: 0 4px 12px rgba(66, 135, 245, 0.3);
+}
+
+.about-content,
+.privacy-content {
+  color: #546e7a;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.about-content p {
+  margin-bottom: 0.75rem;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: rgba(66, 135, 245, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tech-stack ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.75rem;
+}
+
+.tech-stack li {
+  padding: 0.5rem 0;
+  color: #2c3e50;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tech-stack li:hover {
+  transform: translateX(5px);
+  color: #4287f5;
+}
+
+.tech-stack li:before {
+  content: "✓ ";
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1.5rem;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .toggle-container {
+    width: 100%;
+  }
+
+  .unit-button {
+    flex: 1;
+  }
+}
